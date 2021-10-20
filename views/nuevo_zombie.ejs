@@ -1,0 +1,33 @@
+<%- include('partials/head.ejs') %>
+<div class="container">
+    <h1>Registrar Nuevo Zombie</h1>  
+   
+      
+    <form action="nuevo_zombie" method="POST">
+        <div class="row">
+            <div class="input-field col s12">
+                  <label for="nombre">nombre del zombie: </label>
+                  <input type="text" id="nombre_zombie" name="nombre_zombie" placeholder="Raul Plutarco Ers" required>
+              </div>
+
+              <div class="input-field col s12">
+                <select name="id_estado">
+                  <option value="" disabled selected>Selecciona Estado</option>
+                  <option value="1">Infeccion</option>
+                  <option value="2">Desorientacion</option>
+                  <option value="3">Violencia</option>
+                  <option value="4">Desmayo</option>
+                  <option value="5">Transformacion</option>
+                </select>
+                <label>Estado:</label>
+              </div>
+            
+            
+            <input class="large btn" type="submit" name="enviar" value="REGISTRAR">
+        </div>
+    </form>
+</div>
+
+<%- include('partials/footer.ejs') %>
+
+  
